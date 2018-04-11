@@ -27,6 +27,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.github.feeeei:CircleSeekbar:v1.1.2'
     implementation 'com.sdsmdg.harjot:croller:1.0.7'
+    compile 'com.sdsmdg.harjot:croller:1.0.7'
 
     implementation 'com.github.florent37:materialtextfield:1.0.7'
 }

@@ -6,47 +6,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#5d8ef7"
     tools:context="com.example.mypc.myapp.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="4"
-        android:orientation="horizontal">
+        android:layout_height="200px"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"
             android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
 
-                android:text="On"/>
             <TextView
+                android:id="@+id/idOn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Auto"/>
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:text="ON"
+                android:clickable="true"
+                />
+
             <TextView
+                android:id="@+id/idAuto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Off"/>
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:text="AUTO" />
+
+            <TextView
+                android:id="@+id/idOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:text="OFF" />
 
         </LinearLayout>
-        <TextView
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="15"
-            android:textAlignment="center"
-            />
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/home_house"
+                android:tint="@color/home"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#f4f2f5"
+                android:textSize="20sp"
+                android:text="15.o"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+        </FrameLayout>
 
     </LinearLayout>
-
-    <SeekBar
-        android:id="@+id/seekBar"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    
+        android:layout_height="wrap_content">
+        <com.sdsmdg.harjot.crollerTest.Croller
+            android:id="@+id/croller"
+            android:layout_width="match_parent"
+            android:layout_height="350px"
+            android:layout_centerInParent="true"
+            app:back_circle_color="#EDEDED"
+            app:indicator_color="#0B3C49"
+            app:indicator_width="10"
+            app:is_continuous="false"
+            app:label_color="#000000"
+            app:main_circle_color="#FFFFFF"
+            app:max="50"
+            app:label=""
+            app:label_size="25"
+            app:progress_primary_color="#0B3C49"
+            app:progress_secondary_color="#EDEDED"
+            app:start_offset="45" />
+        <TextView
+            android:id="@+id/idDeg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+        <Button
+            android:id="@+id/btCreate"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Create schedule"
+            android:textAllCaps="false"
+            android:background="@drawable/button"/>
 
 </LinearLayout>
